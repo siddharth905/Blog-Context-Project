@@ -3,8 +3,8 @@ import { NavLink } from 'react-router-dom';
 
 export const BlogCard = ({post}) => {
   return (
-    <div className='mt-[50px]'>
-    <p>
+    <div className='w-11/12 max-w-2xl mx-auto mt-[70px]'>
+    <p className='font-bold text-lg'>
        <NavLink to={`/blog/${post.id}`}>
         <span>{post.title}</span>
        </NavLink></p>
@@ -13,18 +13,20 @@ export const BlogCard = ({post}) => {
               By <span className="italic">{post.author}</span> on{" "}
               
               <NavLink to={`/categories/${post.category.replaceAll(" ","-")}`}>
-                <span>{post.category}</span>
+                <span className='font-semibold underline cursor-pointer'>
+                {post.category}
+                </span>
               </NavLink>
 
             </p>
-            <p >Posted On {post.date}</p>
-            <p >{post.content}</p>
-            <div>
+            <p className='text-sm' >Posted On {post.date}</p>
+            <p className='mt-4 mb-2'>{post.content}</p>
+            <div className='flex flex-wrap gap-x-2 items-center'>
               {post.tags.map((tag, index) => (
                 <NavLink
                   key={index}
                   to={`/tag/${tag.replaceAll(" ","-")}`}>
-                  <span>{`#${tag}`}</span>
+                  <span className='text-xs font-semibold underline text-blue-700 cursor-pointer'>{`#${tag}`}</span>
                   </NavLink>
               ))}
             </div>

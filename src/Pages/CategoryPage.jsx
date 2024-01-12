@@ -12,12 +12,12 @@ export const CategoryPage = () => {
   return (
     <div>
        <Header></Header>
-        <div>
-            <button onClick={() => navigate(-1)}>
+        <div className='w-11/12 max-w-2xl mx-auto mt-[70px]'>
+            <button onClick={() => navigate(-1)} className='block border rounded-md shadow-sm font-bold py-2 px-4 focus:outline-none focus:ring focus:ring-opacity-50 bg-indigo-500 hover:bg-indigo-700 text-white border-transparent focus:border-indigo-300 focus:ring-indigo-200'>
                 Back
             </button>
             <h2>
-                Blogs On <span>{category}</span>
+                Blogs On <span className='text-xs font-semibold underline text-blue-700'>{category}</span>
             </h2>
         </div>
         <Blogs></Blogs>
