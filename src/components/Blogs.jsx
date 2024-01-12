@@ -17,7 +17,7 @@ export default function Blogs() {
       ) : (
         posts.map((post) => (
           <div key={post.id} className="w-11/12 max-w-2xl mx-auto">
-            <p className="font-bold text-lg">{post.title}</p>
+            <p className="font-bold text-lg ">{post.title}</p>
             <p className="text-sm my-1">
               By <span className="italic">{post.author}</span> on{" "}
               <span className="font-semibold underline cursor-pointer">{post.category}</span>
