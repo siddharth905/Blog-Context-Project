@@ -18,7 +18,7 @@ export default function App() {
   useEffect(() => {
     
      const page= searchParams.get("page") ?? 1;
-     if(location.pathname.includes("tags")){
+     if(location.pathname.includes("tag")){
       //iska matlab tag wala page show krna h
 
       const tag= location.pathname.split("/").at(-1).replaceAll("-"," ");

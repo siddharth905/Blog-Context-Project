@@ -3,6 +3,7 @@ import { AppContext } from '../context/AppContext';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import BlogCard from '../components/BlogCard';
+import Pagination from '../components/Pagination';
 
 export const BlogPage = () => {
    const newBaseUrl="https://codehelp-apis.vercel.app/api/";
@@ -72,6 +73,7 @@ export const BlogPage = () => {
           <p>No Blog Found</p>
         </div>)
       }
+      <Pagination></Pagination>
     </div>
   )
 }
