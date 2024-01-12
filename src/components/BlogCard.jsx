@@ -23,7 +23,7 @@ export const BlogCard = ({post}) => {
               {post.tags.map((tag, index) => (
                 <NavLink
                   key={index}
-                  to={`/tags/${tag.replaceAll(" ","-")}`}>
+                  to={`/tag/${tag.replaceAll(" ","-")}`}>
                   <span>{`#${tag}`}</span>
                   </NavLink>
               ))}

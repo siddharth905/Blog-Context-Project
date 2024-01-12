@@ -8,7 +8,7 @@ export const BlogPage = () => {
    const newBaseUrl="https://codehelp-apis.vercel.app/api/";
    const[blog,setBlog]=useState(null);
    const[relatedblogs,setRelatedBlogs]=useState([]);
-   const[setLoading,loading]=useContext(AppContext);
+   const{setLoading,loading}=useContext(AppContext);
  
     const location=useLocation();
     const navigation=useNavigate();
@@ -32,7 +32,10 @@ export const BlogPage = () => {
   }
   useEffect(() =>{
       if(blogId){
+        
         fetchRelatedBlogs();
+        console.log("API CALL");
+        
       }
   },[location.pathname]);
 
