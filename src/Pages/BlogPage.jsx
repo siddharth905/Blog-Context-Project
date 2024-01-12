@@ -59,7 +59,7 @@ export const BlogPage = () => {
         (
           <div>
             <BlogCard post={blog}></BlogCard>
-            <h2>Related Blogs</h2>
+            <h2 className='w-11/12 max-w-2xl mx-auto mt-4 font-bold'>Related Blogs...</h2>
             {
               relatedblogs.map((post)=>(
                 <div key={post.id}>
