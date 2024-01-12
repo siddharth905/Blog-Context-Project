@@ -5,7 +5,7 @@ import Header from '../components/Header';
 import BlogCard from '../components/BlogCard';
 
 export const BlogPage = () => {
-   const NewUrl="https://codehelp-apis.vercel.app/api/";
+   const newBaseUrl="https://codehelp-apis.vercel.app/api/";
    const[blog,setBlog]=useState(null);
    const[relatedblogs,setRelatedBlogs]=useState([]);
    const[setLoading,loading]=useContext(AppContext);
@@ -16,7 +16,7 @@ export const BlogPage = () => {
 
   async function fetchRelatedBlogs(){
     setLoading(true);
-    let url=`${NewUrl}get-blog?blogId=${blogId}`;
+    let url=`${newBaseUrl}get-blog?blogId=${blogId}`;
     try{
       const res= await fetch(url);
       const data=await res.json();

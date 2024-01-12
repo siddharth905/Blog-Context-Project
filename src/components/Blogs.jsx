@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+import BlogCard from "./BlogCard";
+
 
 export default function Blogs() {
   const { posts, loading } = useContext(AppContext);
@@ -16,7 +18,8 @@ export default function Blogs() {
         </div>
       ) : (
         posts.map((post) => (
-          <div key={post.id} className="w-11/12 max-w-2xl mx-auto">
+            <BlogCard key={post.id} post={post} ></BlogCard>
+          /* <div key={post.id} className="w-11/12 max-w-2xl mx-auto">
             <p className="font-bold text-lg ">{post.title}</p>
             <p className="text-sm my-1">
               By <span className="italic">{post.author}</span> on{" "}
@@ -31,7 +34,7 @@ export default function Blogs() {
                   className="text-xs font-semibold underline text-blue-700 cursor-pointer">{`#${tag}`}</span>
               ))}
             </div>
-          </div>
+          </div> */
         ))
       )}
     </div>
