@@ -1,0 +1,6 @@
+1)npm install
+
+2)npm start run
+
+3)Add the Redux Toolkit and React-Redux packages to your project:
+      npm install @reduxjs/toolkit react-redux
